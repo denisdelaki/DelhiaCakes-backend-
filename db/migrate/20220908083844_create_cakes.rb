@@ -7,6 +7,7 @@ class CreateCakes < ActiveRecord::Migration[6.1]
      t.integer :likes
      t.integer :available
      t.string :image
+     t.timestamps
     end
   end
 end
