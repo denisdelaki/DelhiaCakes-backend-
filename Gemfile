@@ -50,3 +50,8 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
+  gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
+end
+ruby "2.7.4"
