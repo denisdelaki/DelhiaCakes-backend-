@@ -54,4 +54,4 @@ group :production do
   gem 'pg', '~> 1.4', '>= 1.4.3'
   gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 end
-ruby "3.1.0"
+ruby "2.7.4"
