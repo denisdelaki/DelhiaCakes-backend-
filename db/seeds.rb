@@ -14,7 +14,5 @@ Cake.create([
 ])
 
 # seed the custom orders 
-Order.create([
 
-])
 puts "✅ Done seeding!"

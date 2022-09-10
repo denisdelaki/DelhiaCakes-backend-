@@ -42,12 +42,13 @@ get "/orders" do
     cart=Cart.all 
     cart.to_json
   end
-  post "/orders" do
+  post "/cart" do
     cart=Cart.create(
     name: params[:name],
     image: params[:image],
     quantity: params[:quantity],
-    amount: params[:amount]
+    amount: params[:amount],
+    price: params[:price]
     )
     cart.to_json
   end
