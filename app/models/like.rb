@@ -1,3 +1,3 @@
 class Like < ActiveRecord::Base
-belongs_to :cake
+# belongs_to :cake
 end

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_09_112936) do
+ActiveRecord::Schema.define(version: 2022_09_10_072638) do
 
   create_table "cakes", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.string "quantity"
-    t.integer "likes"
     t.integer "available"
+    t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

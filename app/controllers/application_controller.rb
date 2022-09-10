@@ -35,4 +35,22 @@ get "/orders" do
     )
     order.to_json
   end
+  get "/cart" do
+    cart=Cart.all 
+    cart.to_json
+  end
+  post "/orders" do
+    cart=Cart.create(
+    name: params[:name],
+    image: params[:image],
+    quantity: params[:quantity],
+    amount: params[:amount]
+    )
+    cart.to_json
+  end
+  delete '/cart/:id' do 
+   cart=Cart.find(params[:id])
+   cart.destroy
+   cart.to_json
+  end
 end
