@@ -17,7 +17,7 @@ get "/orders" do
     orders=Order.all 
     orders.to_json
   end
-  post "/orders" do
+  post "/customers" do
     customer=Customer.create(
     fullname: params[:fullname],
     email: params[:email],
@@ -31,7 +31,10 @@ get "/orders" do
     email: params[:email],
     phonenumber: params[:phonenumber],
     image: params[:image],
-    description: params[:description]
+    quantity:params[:quantity],
+    cake: params[:cake],
+    description: params[:description], 
+
     )
     order.to_json
   end
