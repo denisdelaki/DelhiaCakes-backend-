@@ -21,7 +21,8 @@ get "/orders" do
     customer=Customer.create(
     fullname: params[:fullname],
     email: params[:email],
-    phonenumber: params[:phonenumber]
+    phonenumber: params[:phonenumber],
+    cake_id:params[:cake_id]
     )
     customer.to_json
   end
@@ -34,7 +35,8 @@ get "/orders" do
     quantity:params[:quantity],
     cake: params[:cake],
     description: params[:description], 
-
+    cake_id: params[:cake_id],
+    customer_id: params[:customer_id]
     )
     order.to_json
   end
@@ -48,7 +50,8 @@ get "/orders" do
     image: params[:image],
     quantity: params[:quantity],
     amount: params[:amount],
-    price: params[:price]
+    price: params[:price],
+    cake_id: params[:cake_id]
     )
     cart.to_json
   end
